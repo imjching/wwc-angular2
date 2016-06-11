@@ -6,8 +6,7 @@ import { JokeService } from '../shared/services/index';
   moduleId: module.id,
   selector: 'app-dashboard',
   templateUrl: 'dashboard.component.html',
-  styleUrls: ['dashboard.component.css'],
-  providers: [JokeService]
+  styleUrls: ['dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 

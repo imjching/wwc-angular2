@@ -9,13 +9,23 @@ export class JokeService {
 
   constructor(private http: Http) {}
 
-  public url = 'http://api.icndb.com/jokes/random';
+  public baseUrl = 'http://api.icndb.com/';
 
   public getJoke(): Observable<IJoke> {
+    const url = this.baseUrl + 'jokes/random';
+
     return this.http
-            .get(this.url)
+            .get(url)
             .map(result => result.json())
             .map((result: IJokeResult) => result.value);
+  }
+
+  public getCategories(): Observable<string[]> {
+    const url = this.baseUrl + 'categories';
+    return this.http
+             .get(url)
+             .map(result => result.json())
+             .map((result: IJokeResult) => result.value);
   }
 
 }

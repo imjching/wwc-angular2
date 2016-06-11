@@ -1,3 +1,9 @@
-<p>
-  categories works!
-</p>
+<p>categories works!</p>
+<!-- <pre>
+  {{ categories | json }}
+</pre> -->
+<ul *ngIf="categories">
+  <li *ngFor="let cat of categories">
+    {{ cat }}
+  </li>
+</ul>
