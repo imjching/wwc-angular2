@@ -18,7 +18,7 @@ import { CustomizeComponent } from './+customize';
   {path: '/dashboard', component: DashboardComponent},
   {path: '/categories', component: CategoriesComponent},
   {path: '/customize', component: CustomizeComponent},
-  // {path: '/**', redirectTo: ['Dashboard']}
+  // {path: '/**', redirectTo: '/dashboard'}
 ])
 export class HelloWorldAppComponent {
   title = 'Angular 2: Getting Started with jokes!';

@@ -28,4 +28,12 @@ export class JokeService {
              .map((result: IJokeResult) => result.value);
   }
 
+  public getJokes(category: string, limit: number): Observable<IJoke[]> {
+    const url = `${this.baseUrl}jokes/random/${limit}?limitTo=${category}`; // different syntax
+    return this.http
+             .get(url)
+             .map(result => result.json())
+             .map((result: IJokeResult) => result.value);
+  }
+
 }

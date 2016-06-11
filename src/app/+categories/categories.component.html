@@ -4,6 +4,12 @@
 </pre> -->
 <ul *ngIf="categories">
   <li *ngFor="let cat of categories">
-    {{ cat }}
+    <a (click)="retrieveJokes(cat)">{{ cat }}</a>
+  </li>
+</ul>
+
+<ul *ngIf="jokes">
+  <li *ngFor="let joke of jokes">
+    {{ joke.joke }}
   </li>
 </ul>
