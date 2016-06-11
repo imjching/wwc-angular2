@@ -4,7 +4,7 @@
 </pre> -->
 <ul *ngIf="categories">
   <li *ngFor="let cat of categories">
-    <a (click)="retrieveJokes(cat)">{{ cat }}</a>
+    <a href="#" (click)="retrieveJokes(cat, $event)">{{ cat }}</a>
   </li>
 </ul>
 

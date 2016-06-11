@@ -19,7 +19,8 @@ export class CategoriesComponent implements OnInit {
     this.jokeService.getCategories().subscribe(result => { this.categories = result });
   }
 
-  retrieveJokes(category: string) {
+  retrieveJokes(category: string, event) {
+    event.preventDefault();
     this.jokeService.getJokes(category, 5).subscribe(result => { this.jokes = result });
   }
 
