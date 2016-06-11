@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { IJoke } from '../shared/interfaces/index';
+import { JokeService } from '../shared/services/index';
 
 @Component({
   moduleId: module.id,
   selector: 'app-dashboard',
   templateUrl: 'dashboard.component.html',
-  styleUrls: ['dashboard.component.css']
+  styleUrls: ['dashboard.component.css'],
+  providers: [JokeService]
 })
 export class DashboardComponent implements OnInit {
 
   public joke: IJoke;
 
-  constructor() {}
+  constructor(private jokeService: JokeService) {}
 
   ngOnInit() {
     // using API to call joke
-    this.joke = {
-      id: '1',
-      joke: 'Testing!'
-    }
+    this.joke = this.jokeService.getJoke();
   }
 
 }
