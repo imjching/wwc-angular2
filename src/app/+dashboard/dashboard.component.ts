@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IJoke } from '../shared/interfaces/index';
 
 @Component({
   moduleId: module.id,
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  public joke: IJoke;
+
   constructor() {}
 
   ngOnInit() {
+    // using API to call joke
+    this.joke = {
+      id: '1',
+      joke: 'Testing!'
+    }
   }
 
 }
