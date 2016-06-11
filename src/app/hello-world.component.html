@@ -1,7 +1,7 @@
-<label>Name: </label>
-<input type="text" [(ngModel)]="yourName" placeholder="Enter a name here">
-<hr>
-<h1 *ngIf="yourName">Hello {{ yourName }}</h1>
-<h1 [hidden]="!yourName">Hello {{ yourName }}</h1>
-<button type="button" (click)="sayHello(yourName)">Hello</button>
+<h1>
+  {{ title }}
+</h1>
+<a [routerLink]="['/dashboard']">Dashboard</a>
+<a [routerLink]="['/categories']">Categories</a>
+<a [routerLink]="['/customize']">Customize Joke</a>
 <router-outlet></router-outlet>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DashboardComponent } from './+dashboard';
 import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { CategoriesComponent } from './+categories';
+import { CustomizeComponent } from './+customize';
 
 @Component({
   moduleId: module.id,
@@ -13,27 +15,10 @@ import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
   providers: [ROUTER_PROVIDERS]
 })
 @Routes([
-  {path: '/dashboard', component: DashboardComponent}
+  {path: '/dashboard', component: DashboardComponent},
+  {path: '/categories', component: CategoriesComponent},
+  {path: '/customize', component: CustomizeComponent}
 ])
 export class HelloWorldAppComponent {
-  title = 'hello-world works!';
-
-  customer: ICustomer = {
-    //you need to have all fields
-    name: 'Jane',
-    age: 10,
-    isSingle: false
-  }
-
-  name : string = '';
-  sayHello(name : string) {
-    window.alert('Hello ' + name);
-  }
-}
-
-export interface ICustomer {
-  name: string;
-  age: number;
-  isSingle: boolean;
-  // isSingle?: boolean; // this means optional
+  title = 'Angular 2: Getting Started with jokes!';
 }
