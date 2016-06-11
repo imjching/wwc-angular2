@@ -17,7 +17,8 @@ import { CustomizeComponent } from './+customize';
 @Routes([
   {path: '/dashboard', component: DashboardComponent},
   {path: '/categories', component: CategoriesComponent},
-  {path: '/customize', component: CustomizeComponent}
+  {path: '/customize', component: CustomizeComponent},
+  // {path: '/**', redirectTo: ['Dashboard']}
 ])
 export class HelloWorldAppComponent {
   title = 'Angular 2: Getting Started with jokes!';
