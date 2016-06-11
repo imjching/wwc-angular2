@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DashboardComponent } from './+dashboard';
-import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 import { CategoriesComponent } from './+categories';
 import { CustomizeComponent } from './+customize';
 

@@ -17,7 +17,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     // using API to call joke
-    this.joke = this.jokeService.getJoke();
+    // this.joke = this.jokeService.getJoke();
+    this.jokeService.getJoke().subscribe(result => { this.joke = result });
   }
 
 }

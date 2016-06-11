@@ -1,4 +1,7 @@
 <h5>Joke of the day: </h5>
-<p>
+<p *ngIf="joke">
   {{ joke.joke }}
 </p>
+<!--OR <p>
+  {{ joke?.joke }}
+</p>-->
